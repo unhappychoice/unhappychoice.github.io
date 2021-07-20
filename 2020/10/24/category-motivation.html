@@ -1,0 +1,242 @@
+<!DOCTYPE html><html><head><title>なぜ圏論が必要か - blog.unhappychoice.com</title><meta content="text/html; charset=UTF-8" http-equiv=Content-Type /><meta charset=utf-8 /><meta content="IE=edge;chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1" name=viewport /><meta property="fb:app_id" content=949962025089727 /> <meta property="og:title" content="なぜ圏論が必要か"/> <meta property="og:site_name" content="blog.unhappychoice.com"/> <meta property="og:locale" content=ja_JP /> <meta property="og:type" content=website /> <meta property="og:description" content="A blog written by unhappychoice"/> <meta property="og:image" content="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=1000"/> <meta property="og:image:width" content=1000 /> <meta property="og:image:height" content=1000 /> <meta name="twitter:card" property=summary /> <meta name="twitter:creator" property="@unhappychoice"/><link rel=alternate type="application/atom+xml" title="Atom Feed" href="/feed.xml"/><link crossorigin=anonymous href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-reboot.min.css" integrity="sha512-gl/07tE1atRY5leOa5GtQa/pclV529xEP5cDTIdU1rj7vDh4KKz3nHrP7DsTBx3F++ihOqZGdcRTfOvrU/JF4g==" rel=stylesheet /><link href="//fonts.googleapis.com/css2?family=Noto+Sans+JP" rel=stylesheet /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel=stylesheet /><style>.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .sa {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sc {
+  color: #e6db74;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .sr {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .ss {
+  color: #e6db74;
+}
+.highlight .s, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .bp {
+  color: #f8f8f2;
+}
+.highlight .nb {
+  color: #f8f8f2;
+}
+.highlight .ni {
+  color: #f8f8f2;
+}
+.highlight .nn {
+  color: #f8f8f2;
+}
+.highlight .vc {
+  color: #f8f8f2;
+}
+.highlight .vg {
+  color: #f8f8f2;
+}
+.highlight .vi {
+  color: #f8f8f2;
+}
+.highlight .nv, .highlight .vm {
+  color: #f8f8f2;
+}
+.highlight .w {
+  color: #f8f8f2;
+}
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
+}</style><link href="/stylesheets/all.css" rel=stylesheet /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44965299-2', 'auto');
+  ga('send', 'pageview');
+</script> <script>window.MathJax = {
+  loader: { load: ['[tex]/amscd'] },
+  tex: {
+    packages: { '[+]': ['amscd'] },
+    macros: {
+      cats: ["{\\mathcal{#1}}", 1],
+      catl: ["{\\mathbf{#1}}", 1],
+      set: ["{\\mathbb{#1}}", 1],
+      id: ["{\\mathbf{id}_{#1}}", 1],
+      functor: ["{\\mathbf{#1}}", 1],
+      bold: ["{\\bf #1}", 1]
+    }
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    preferredFont: null,
+    webFont: "Neo-Euler",
+    undefinedFamily: "'Noto Sans Japanese', sans-seif",
+    mtextFontInherit: true
+  }
+};</script><script id=MathJax-script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="/javascripts/all.js"></script><body><div id=main role=main><div class=content><h1 class=heading><img class=heading__image src="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=100"/><div class=heading__icons><a href="https://github.com/unhappychoice"><span class="fa fa-github"></span></a><a href="https://www.facebook.com/profile.php?id=100008274691739"><span class="fa fa-facebook-square"></span></a><a href="https://www.linkedin.com/in/yuji-ueki-4a17a5101"><span class="fa fa-linkedin"></span></a></div>unhappychoice.com</h1><ol class=breadcrumb><li><a href="/">TOP</a></li><li><a href="../../../2020.html">2020年</a></li><li><a href="../../10.html">10月</a></li><li><a href="../24.html">24日</a></li><li>なぜ圏論が必要か</li></ol><article class=article><h2 class=article__title>なぜ圏論が必要か</h2><div class=meta><div class=time><span class="fa fa-clock-o"></span>2020-10-24</div><div class=tags><div class=tag><span class="fa fa-tag"></span><a href="../../../tags/programming.html">programming </a></div><div class=tag><span class="fa fa-tag"></span><a href="../../../tags/category-theory.html">category_theory </a></div></div></div><div class=article__content><p>たまには誰かの役に立つであろうことを書いてみようかと思いたったので、圏論について書いてみようかと思い始めた。（ただしまだまだ学習中であって圏論について明るいというわけでもない） ので、序論と言うかモチベーションの部分をまずまとめておく。</p> <p></p> <p>そもそも、プログラミングをするにあたってなぜ圏論が有用か。</p> <h3>組み合わせ / 分割</h3> <p>圏の公理からして組み合わせ / Composability の概念が含まれていて、それこそがプログラムの再利用性や可読性を上げるもの、という点があげられる。 <code>組み合わせができる</code> ことは逆の視点から見ると、 <code>分割ができる</code> ことと同じと捉えることができる<sup id=fnref1><a href="#fn1">1</a></sup>。</p> <p>プログラミングにおいて、コードを小さな要素に分割して再利用することの大切さは DRY<sup id=fnref2><a href="#fn2">2</a></sup> 原則や、 UNIX哲学<sup id=fnref3><a href="#fn3">3</a></sup> で十分に知られているように思う。 圏論はある意味そのフレームワークとなり、その考え方や捉え方、道具 ( <code>射</code> , <code>関手</code> , <code>自然変換</code>, <code>モナド</code>... ) を持っていることで、 分割、組合わせをよりうまくできるようになれる、という感覚を持っている。</p> <p>分割ができることのその先に、分割したコードをどこに置くべきかのモジュール設計や、もっと一般には設計論 ( <code>DDD</code>, <code>クリーンアーキテクチャ</code>, <code>MV*</code> ) があるはずで、 分割できないことには、そもそもどのモジュールにどのようなコードを置くか、という操作ができない。 その意味で、圏論を知って組み合わせ/分割をより良くできることは、設計論に先んずるとも言えるはず。</p> <h3>広い視点</h3> <p>例えばカリー=ハワード=ランベック対応<sup id=fnref4><a href="#fn4">4</a></sup>という概念があって、証明論とラムダ計算の理論がどちらも圏論で説明できる<sup id=fnref5><a href="#fn5">5</a></sup>。 例に限らず、圏論的に見ると、違っているように見えても同じ構造を持っていること、というのがよく見られる。 そのような抽象的な視点、というのは圏論を知らない人から見ると、 <code>天から降ってきた思考</code> や <code>柔軟なものの捉え方</code> のような言葉でしか表せないのに対して、 実際の違いとしては圏論の知識があるかないか、という点に限られている。 また、そのような抽象的な考えのフレームワークを手に入れる事は、プログラミングに限らず、事業運営なり対戦ゲームなり、生活を豊かにするために利用できる、と言えると思っている。</p> <div class=footnotes> <hr> <ol> <li id=fn1> <p>必要十分条件のような意味ではもちろんないけれども&nbsp;<a href="#fnref1">&#8617;</a></p> </li> <li id=fn2> <p><a href="https://ja.wikipedia.org/wiki/Don't_repeat_yourself">Don&#39;t repeat yourself - Wikipedia</a>&nbsp;<a href="#fnref2">&#8617;</a></p> </li> <li id=fn3> <p><a href="https://ja.wikipedia.org/wiki/UNIX哲学">UNIX哲学 - Wikipedia</a>&nbsp;<a href="#fnref3">&#8617;</a></p> </li> <li id=fn4> <p><a href="https://ja.wikipedia.org/wiki/カリー＝ハワード同型対応#カリー＝ハワード＝ランベック対応">カリー=ハワード同型対応 - Wikipedia</a>&nbsp;<a href="#fnref4">&#8617;</a></p> </li> <li id=fn5> <p>正確には同型なので、ラムダ計算でデカルト閉圏が説明できる、と逆にも言えるが&nbsp;<a href="#fnref5">&#8617;</a></p> </li> </ol> </div> </div></article><div class=paginator><div class=paginator__prev><a href="../08/recent.html">前の記事へ</a></div><div class=paginator__next><a href="../29/management.html">次の記事へ</a></div></div></div></div><aside id=sidebar><h3>最近の記事</h3><ol><li><a href="../../../2021/07/12/searching-lyric.html">iOSのショートカットで１タップ歌詞検索</a></li><li><a href="../../11/04/latex-syntax.html">記事内でTex入力できるようにした</a></li><li><a href="../29/management.html">プロダクト・エンジニアリングマネジメントへの所感</a></li><li><a href="category-motivation.html">なぜ圏論が必要か</a></li><li><a href="../08/recent.html">最近の活動</a></li><li><a href="../../06/30/singing-better.html">よりよく歌うにあたって気をつけたこと</a></li><li><a href="../../../2019/10/01/github-activity.html">My Github activity in 2019 / 09</a></li><li><a href="../../../2019/09/01/github-activity.html">My Github activity in 2019 / 08</a></li><li><a href="../../../2019/07/01/github-activity.html">My Github activity in 2019 / 06</a></li><li><a href="../../../2019/05/03/what-i-know-math.html">知っていること / 知らないこと - 数学</a></li></ol><h3>タグ</h3><ol><li><a href="/tags/programming.html"><span class=badge>14</span>programming</a></li><li><a href="/tags/github.html"><span class=badge>9</span>github</a></li><li><a href="/tags/what-i-know.html"><span class=badge>4</span>what_i_know</a></li><li><a href="/tags/others.html"><span class=badge>3</span>others</a></li><li><a href="/tags/liquor.html"><span class=badge>1</span>liquor</a></li><li><a href="/tags/release.html"><span class=badge>1</span>release</a></li><li><a href="/tags/singing.html"><span class=badge>1</span>singing</a></li><li><a href="/tags/category-theory.html"><span class=badge>1</span>category_theory</a></li><li><a href="/tags/tips.html"><span class=badge>1</span>tips</a></li></ol><h3>年別</h3><ol><li><a href="/2021.html"><span class=badge>1</span>2021年</a></li><li><a href="/2020.html"><span class=badge>5</span>2020年</a></li><li><a href="/2019.html"><span class=badge>7</span>2019年</a></li><li><a href="/2018.html"><span class=badge>1</span>2018年</a></li><li><a href="/2017.html"><span class=badge>6</span>2017年</a></li><li><a href="/2016.html"><span class=badge>3</span>2016年</a></li></ol></aside></body></head></html>

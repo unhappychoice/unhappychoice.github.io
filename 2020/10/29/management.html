@@ -1,0 +1,242 @@
+<!DOCTYPE html><html><head><title>プロダクト・エンジニアリングマネジメントへの所感 - blog.unhappychoice.com</title><meta content="text/html; charset=UTF-8" http-equiv=Content-Type /><meta charset=utf-8 /><meta content="IE=edge;chrome=1" http-equiv=X-UA-Compatible /><meta content="width=device-width, initial-scale=1" name=viewport /><meta property="fb:app_id" content=949962025089727 /> <meta property="og:title" content="プロダクト・エンジニアリングマネジメントへの所感"/> <meta name="twitter:card" property=summary /> <meta name="twitter:creator" property="@unhappychoice"/><link rel=alternate type="application/atom+xml" title="Atom Feed" href="/feed.xml"/><link crossorigin=anonymous href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap-reboot.min.css" integrity="sha512-gl/07tE1atRY5leOa5GtQa/pclV529xEP5cDTIdU1rj7vDh4KKz3nHrP7DsTBx3F++ihOqZGdcRTfOvrU/JF4g==" rel=stylesheet /><link href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,500|Rubik:400,500&amp;amp;subset=japanese" media=screen rel=stylesheet /><link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel=stylesheet /><style>.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cm {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .c1 {
+  color: #75715e;
+  font-style: italic;
+}
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
+  font-style: italic;
+}
+.highlight .err {
+  color: #960050;
+  background-color: #1e0010;
+}
+.highlight .gi {
+  color: #ffffff;
+  background-color: #324932;
+}
+.highlight .gd {
+  color: #ffffff;
+  background-color: #493131;
+}
+.highlight .ge {
+  color: #000000;
+  font-style: italic;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #999999;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .o {
+  color: #f92672;
+  font-weight: bold;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .sa {
+  color: #66d9ef;
+  font-weight: bold;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sc {
+  color: #e6db74;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .sr {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .ss {
+  color: #e6db74;
+}
+.highlight .s, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .ne {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .bp {
+  color: #f8f8f2;
+}
+.highlight .nb {
+  color: #f8f8f2;
+}
+.highlight .ni {
+  color: #f8f8f2;
+}
+.highlight .nn {
+  color: #f8f8f2;
+}
+.highlight .vc {
+  color: #f8f8f2;
+}
+.highlight .vg {
+  color: #f8f8f2;
+}
+.highlight .vi {
+  color: #f8f8f2;
+}
+.highlight .nv, .highlight .vm {
+  color: #f8f8f2;
+}
+.highlight .w {
+  color: #f8f8f2;
+}
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight {
+  color: #f8f8f2;
+  background-color: #49483e;
+}</style><link href="/stylesheets/all.css" rel=stylesheet /><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44965299-2', 'auto');
+  ga('send', 'pageview');
+</script> <script>window.MathJax = {
+  loader: { load: ['[tex]/amscd'] },
+  tex: {
+    packages: { '[+]': ['amscd'] },
+    macros: {
+      cats: ["{\\mathcal{#1}}", 1],
+      catl: ["{\\mathbf{#1}}", 1],
+      set: ["{\\mathbb{#1}}", 1],
+      id: ["{\\mathbf{id}_{#1}}", 1],
+      functor: ["{\\mathbf{#1}}", 1],
+      bold: ["{\\bf #1}", 1]
+    }
+  },
+  "HTML-CSS": {
+    availableFonts: [],
+    preferredFont: null,
+    webFont: "Neo-Euler",
+    undefinedFamily: "'Noto Sans Japanese', sans-seif",
+    mtextFontInherit: true
+  }
+};</script><script id=MathJax-script src="//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><script src="/javascripts/all.js"></script><body><main id=main role=main><div class=content><h1 class=heading><img class=heading__image src="https://secure.gravatar.com/avatar/d75911a871edff466e3f05b152150be1?s=100"/><div class=heading__icons><a href="https://github.com/unhappychoice"><span class="fa fa-github"></span></a><a href="https://www.facebook.com/profile.php?id=100008274691739"><span class="fa fa-facebook-square"></span></a><a href="https://www.linkedin.com/in/yuji-ueki-4a17a5101"><span class="fa fa-linkedin"></span></a></div>unhappychoice.com</h1><ol class=breadcrumb><li><a href="/">TOP</a></li><li><a href="../../../2020.html">2020年</a></li><li><a href="../../10.html">10月</a></li><li><a href="../29.html">29日</a></li><li>プロダクト・エンジニアリングマネジメントへの所感</li></ol><article class=article><h2 class=article__title>プロダクト・エンジニアリングマネジメントへの所感</h2><div class=meta><div class=time><span class="fa fa-clock-o"></span>2020-10-29</div><div class=tags><div class=tag><span class="fa fa-tag"></span><a href="../../../tags/others.html">others </a></div></div></div><div class=article__content><p>ソフトウェアの製品開発において、単なる人員増強が工数短縮とはならない <sup id=fnref1><a href="#fn1">1</a></sup> 事実はよく知られていたり、多くの人は実体験として持っているはず。 そのことは逆の視点でみると、<strong>より少ない人数でより大きなことを成せるポテンシャルがある</strong>、とも言えるはず。</p> <p>もちろんそれは、無条件に達成できるわけではなくて、そのためには<strong>個人あたりの生産性を最大限に引き出す必要がある</strong>、と考えられる。</p> <p>言い直すと、<strong>本当に必要な仕事のみを正確に素早く、量をこなすこと</strong>ことの重要性は、従来の産業等に比べて特異に高いと言える。 特にスタートアップや、成果を期待されるスモールチームにおいてこれは顕著になってくるはず。</p> <p></p> <h2>XXマネージャー への批判</h2> <ul> <li>単一障害点・ボトルネックになりうる</li> <li>判断の偏り<br> <ul> <li>全員の意見をよく聞く、と言っても最終判断に偏りが生じる</li> <li>その個人がより神に近い存在で、いつでもより最適なパラメーターで世界にフィッティングできるならもちろん別（反語）</li> <li>神への近さが同程度の人間が複数いるならば、それぞれの人間が同程度に意思決定したほうが、成果につながる（仮説） <ul> <li><code>多くのユーザーを対象にする == ある分布に最適化する</code> ような状況との関連性から</li> </ul></li> </ul></li> <li>メンバーの納得・自己効力感 <ul> <li>天下りのよくわからない命令を聞かないといけない <ul> <li>たとえどれだけ感じの良い言葉を用いたりしても、事実は上記</li> </ul></li> </ul></li> <li>データドリブンな仕組みにより、そもそもマネージャーでなくても客観的に判断の作業を行える <ul> <li>Highest Paid Person&#39;s Opinion<sup id=fnref2><a href="#fn2">2</a></sup></li> </ul></li> </ul> <p>以上から誤解を恐れず書くと、マネージャーという役職には脆弱性が多々有り、必要なのはマネージャーの存在ではなく、 チームの全員が<strong>すべてを知っている or 知れる</strong> かつ、 <strong>知っていることにより意思決定をできる</strong>状況を理想として、それを実現する仕組み、ということになる。 （<strong>すべて</strong>は理想・極限なので現実には、各メンバーが形が多少異なるが、総じて面積の大きい知識量の分布を持っていること、にはなる。</p> <h2>要件の整理</h2> <h3>避けたいこと</h3> <ul> <li>曖昧・客観視されない・優先度が一意ではない施策/タスクの存在</li> <li>個人間の情報量の分布に関して <ul> <li>中央値が小さくなること</li> <li>分散が大きくなること</li> </ul></li> <li>同期的なフロー</li> <li>属人化・単一障害点の解消</li> <li>上記すべてに対する、本質的ではない解決方法（仕事のための仕事） <ul> <li>例えば、 <code>情報共有の場が足りないので、定例会議を開催しましょう！</code></li> </ul></li> </ul> <h3>達成したいこと</h3> <ul> <li>より良い施策立案 <ul> <li>ある課題に対する、全てのトレードオフになる要素を洗い出せること</li> <li>それらの最適解となる施策を設計・実装できること</li> <li>ある意味これが至上目標で、そのためにすべてを知る必要があって、知らなくて良いことなど無い <ul> <li>そのスタンスの個人の集まりが、より大きな成果をだせるはず</li> </ul></li> </ul></li> <li>意思決定に必要な情報が <ul> <li>公開されていること / ログとして残っていること <ul> <li>座標空間と時間に関してスケールしている状態</li> </ul></li> <li>情報がなめらかに同期されていること <ul> <li>会議で同期のような離散的なフローではなく</li> </ul></li> </ul></li> <li>非同期性の最大化 <ul> <li>即時の意見表明 &amp; 遅延評価のレスポンス</li> <li>アイデアや議論の時間発展を推奨する<sup id=fnref3><a href="#fn3">3</a></sup></li> <li>割り込みの削減<sup id=fnref4><a href="#fn4">4</a></sup> </li> </ul></li> <li>属人性の排除 <ul> <li>プロダクトを全員で所有する状況に <ul> <li>圧倒的当事者意識</li> <li>分業状態だと、全体最適に目が行きにくい</li> </ul></li> <li>耐障害性の向上</li> <li>休みたいときに休める</li> <li>etc...</li> </ul></li> </ul> <h2>具体的な施策</h2> <h3>分報<sup id=fnref5><a href="#fn5">5</a></sup></h3> <p>心理的安全性の担保のような文脈で語られたりするが、あくまで主要な役割は従来で言う<strong>報連相</strong>に当たると思っている。 Slack 等のチャットツールの登場により、報連相の頻度極限を取れるようになった現在、それをしない理由が無い、と言えると思う。</p> <ul> <li>基本的に自分に関連する人同士（というか全員）は購読しあい、すべて読む前提</li> <li><code>ちょっと話したいんですけど</code> と相手のタイミングを伺う時間で Slack に洗いざらいタイプする <ul> <li>前提として目指している地点が<strong>全員がすべてを知っている</strong>ことなので</li> </ul></li> </ul> <p>もちろん必然的に普通の人間に求められるよりも多くのスキルが必要となる。 （ <strong>速読</strong>や<strong>タイピング速度</strong>、<strong>曖昧さの少ない文章表現</strong>、 etc... </p> <p>このようなスキルの得意不得意というのは、鶏卵問題に帰着するので、みんなで成果を最大化するためにみんなで得意になるような姿勢が必要に思う。 （<strong>非同期コミュニケーションを利用しない結果苦手だ</strong> &lt;-&gt; <strong>非同期コミュニケーションを利用した結果得意だ</strong></p> <h3>成果物 -&gt; レビュー のフロー</h3> <p>例えば対になるアンチパターンとして、<strong>重要そうな問題が上がって来たので、とりあえずみんなで話し合いましょう</strong>のようなフローがあげられる。 この場合問題点として、</p> <ul> <li>単にコスト（ N人 * M分 * 人件費) がかかる</li> <li>事前の調査や、個人単位でのブレストが疎かになりやすい <ul> <li>要するに複数人集まっても、浅い意見の応酬で一人で同じ時間ブレストするのと同じ以下の成果しか得られない、ようなことに</li> <li>ただし、リソースが潤沢にあるチームにおいて、95点のものを99点にするために行う場合には有用かもしれない</li> </ul></li> <li>機会が公平にならない <ul> <li>発言力や流暢に喋れる力<sup id=fnref6><a href="#fn6">6</a></sup>が強い人に偏る </li> <li>物理的に参加してない人は何も出来ない</li> </ul></li> <li>生ログが残らない（議事録をとったとしても）</li> <li>グループシンク、正常性や同調バイアス、 etc... <ul> <li>対面での批判はとても難しい</li> </ul></li> </ul> <p><strong>誰かが成果物をつくる</strong> -&gt; <strong>URL付きで公開</strong> -&gt; <strong>必要な人数または全員で非同期レビュー</strong> のフローを採用すると、 コストとパフォーマンスのトレードオフを取りつつ、上記の問題を解決できるはず、と思っている。</p> <h4>レビューの手法</h4> <ul> <li>しっかりとしたレビュー/コメントは、従来の傾聴概念</li> <li>しっかりレビューすること &gt;&gt;&gt; 小手先の言葉の濫用 <ul> <li>やたらポジティブに褒めましょうのような意見があるような気がするが、チームを対象にすると難しさを感じる <ul> <li>誰かを褒めることは他の誰かを貶めることや、妬み/羨み<sup id=fnref7><a href="#fn7">7</a></sup>に繋がりかねなかったり</li> <li>他に、そのようなことを前提にしていることを知っていたり、認知心理学、バイアス等の知識を持っている人は、そう単純・ポジティブには受け取らない</li> <li>つまりは、極力フラットな表現をする / 素直に良いと思ったものは良いと表現する ことで十分に思う </li> </ul></li> </ul></li> </ul> <h3>イシュー・チケット管理</h3> <h4>すべての施策・タスクをシステムに乗せて、優先度順に並べる</h4> <p>イシューを並べかえる作業自体を誰がやるのか？という問いには基本的にマネージャー的な人の役割となるが、非同期に代理で誰がやっても良い/できるとする。 この並べ替える作業、というのは視点を変えると、<strong>優先度の順序付けという成果物の作成</strong> -&gt; <strong>全員にレビューを依頼</strong>している図になっている。</p> <ul> <li>見える化・客観性の担保 <ul> <li>一番上にあるものが次にやるべきタスク <ul> <li>主観性が排除されている</li> </ul></li> <li>仮に異論ある人はイシュー上に意見を述べて優先度の議論につながる <ul> <li>優先度は重要で議論すべき対象なのに、よくあるフローだと、そもそも議論にすらなれなずに (Managerの) 適当な判断が通りがち</li> </ul></li> <li>優先度に関するコミュニケーション全てを削減 <ul> <li>Ex: 手空いたんですが、次何やればいいですか？（PMに向かって）</li> </ul></li> </ul></li> </ul> <h4>進行に応じて詳細化する</h4> <ul> <li>起票段階ではアイデアベース</li> <li>関連データやインパクトで優先度の見積もり、並べ替え</li> <li>実際に着手する段階で、実行者が調査・トレードオフの並び替え・実装内容決定 <ul> <li>起票段階ではそもそも優先度が決まっていないので、起票時にやるのは無駄</li> </ul></li> </ul> <h2>施策類を実行したときの副作用</h2> <ul> <li>リモート可能性が副次的に上がる <ul> <li>多分要するに \(リモート可能 \supset{適正な業務フロー}\)</li> </ul></li> </ul> <h2>その他感想</h2> <blockquote class=twitter-tweet data-partner=tweetdeck><p lang=ja dir=ltr>みんなでスーパーマンになってスーパーマンであるがゆえ一人あたり3000万円貰ってても問題ない状態が理想じゃないんか</p>&mdash; Yuji Ueki (@unhappychoice_e) <a href="https://twitter.com/unhappychoice_e/status/1312233112093433858?ref_src=twsrc%5Etfw">October 3, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset=utf-8></script> <ul> <li>まぁもしくは週休5日で良くなる状態</li> <li>たとえば、属人化排除したり、ある意味空気のような（だが余計な仕事を産まない）仕組みをインストールしたところで、問題解決します顔の人が現れて不用意な案が採用なり、評価されがちなみたいな辛さ</li> </ul> <div class=footnotes> <hr> <ol> <li id=fn1> <p><a href="https://ja.wikipedia.org/wiki/%E4%BA%BA%E6%9C%88%E3%81%AE%E7%A5%9E%E8%A9%B1">人月の神話 | Wikipedia</a>&nbsp;<a href="#fnref1">&#8617;</a></p> </li> <li id=fn2> <p><a href="https://www.enricdurany.com/agile-startup-entrepreneur/hippos-highest-paid-person-opinion-data-driven-decision-making/">HiPPO’s (Highest Paid Person’s Opinion): Letting Data Drive Decisions</a>&nbsp;<a href="#fnref2">&#8617;</a></p> </li> <li id=fn3> <p>普通人間の性質として、会話したその場でトレードオフ全部考慮しきれてベストな案までたどり着ける、みたいなことはなくて、しばらく考えた後、散歩したり風呂に入っているときに、ふとその方法が思い浮かぶものである。&nbsp;<a href="#fnref3">&#8617;</a></p> </li> <li id=fn4> <p>エンジニアには話しかけない、みたいな議論がよくあるが、価値ある仕事をしているのにそれを中断させられて嬉しい人は居ないはず&nbsp;<a href="#fnref4">&#8617;</a></p> </li> <li id=fn5> <p><a href="http://c16e.com/1511101558/">Slackで簡単に「日報」ならぬ「分報」をチームで実現する3ステップ〜Problemが10分で解決するチャットを作ろう</a>&nbsp;<a href="#fnref5">&#8617;</a></p> </li> <li id=fn6> <p>流暢に喋るということは、新規な意見やまだ考えきれていないケースの考慮を欠いているためにできるはず。（一部の天才を除き）浅い思考の結論を採用しつづけた先にどうなるかは言わずもがな。&nbsp;<a href="#fnref6">&#8617;</a></p> </li> <li id=fn7> <p>こう書くと振れ幅大きく感じられるが、実際に起きることは<strong>0.1妬み/羨み</strong>みたいなものの蓄積 -&gt; 自己効力感の低下&nbsp;<a href="#fnref7">&#8617;</a></p> </li> </ol> </div> </div></article><div class=paginator><div class=paginator__prev><a href="../24/category-motivation.html">古い記事へ</a></div><div class=paginator__next><a href="../../11/04/latex-syntax.html">新しい記事へ</a></div></div></div></main><aside id=sidebar><h3>最近の記事</h3><ol><li><a href="../../../2023/10/17/desk-environment.html">デスク環境の変遷</a></li><li><a href="../../../2021/07/12/searching-lyric.html">iOSのショートカットで１タップ歌詞検索</a></li><li><a href="../../11/04/latex-syntax.html">記事内でTex入力できるようにした</a></li><li><a href="management.html">プロダクト・エンジニアリングマネジメントへの所感</a></li><li><a href="../24/category-motivation.html">なぜ圏論が必要か</a></li><li><a href="../08/recent.html">最近の活動</a></li><li><a href="../../06/30/singing-better.html">よりよく歌うにあたって気をつけたこと</a></li><li><a href="../../../2019/10/01/github-activity.html">My Github activity in 2019 / 09</a></li><li><a href="../../../2019/09/01/github-activity.html">My Github activity in 2019 / 08</a></li><li><a href="../../../2019/07/01/github-activity.html">My Github activity in 2019 / 06</a></li></ol><h3>タグ</h3><ol><li><a href="/tags/programming.html"><span class=badge>15</span>programming</a></li><li><a href="/tags/github.html"><span class=badge>9</span>github</a></li><li><a href="/tags/what-i-know.html"><span class=badge>4</span>what_i_know</a></li><li><a href="/tags/others.html"><span class=badge>3</span>others</a></li><li><a href="/tags/liquor.html"><span class=badge>1</span>liquor</a></li><li><a href="/tags/release.html"><span class=badge>1</span>release</a></li><li><a href="/tags/singing.html"><span class=badge>1</span>singing</a></li><li><a href="/tags/category-theory.html"><span class=badge>1</span>category_theory</a></li><li><a href="/tags/tips.html"><span class=badge>1</span>tips</a></li><li><a href="/tags/other.html"><span class=badge>1</span>other</a></li></ol><h3>年別</h3><ol><li><a href="/2023.html"><span class=badge>1</span>2023年</a></li><li><a href="/2021.html"><span class=badge>1</span>2021年</a></li><li><a href="/2020.html"><span class=badge>5</span>2020年</a></li><li><a href="/2019.html"><span class=badge>7</span>2019年</a></li><li><a href="/2018.html"><span class=badge>1</span>2018年</a></li><li><a href="/2017.html"><span class=badge>6</span>2017年</a></li><li><a href="/2016.html"><span class=badge>3</span>2016年</a></li></ol></aside></body></head></html>
